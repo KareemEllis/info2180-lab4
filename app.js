@@ -1,25 +1,26 @@
-window,addEventListener("load", () => {
-    const button = document.getElementById('btn')
+window.addEventListener("load", () => {
 
+    const input = document.querySelector("input")
+    const form = document.querySelector("form")
+    const result = document.querySelector("#result")
 
-    button.addEventListener('click', () => {
-        //alert("CLICKED")
+    
+    form.addEventListener('submit', (e) => {
+        //Prevent form submission
+        e.preventDefault()
 
-        fetch('superheroes.php')
-            //Getting the response from the php files
-            .then((response) => {
-                if (response.ok) {
-                    return response.text()
-                }
-                else{
-                    return Promise.reject("Something went wrong!")
-                }
-            })
-            //Getting the data from the response.text()
-            .then((data) => {
-                alert(data)
-            })
-            .catch((error) => console.log('Error has occured: ' + error))
+        let userInput = input.value.trim()
+        let url = `superheroes.php?name=${userInput}`
+
+        fetch(url)
+        .then(response => {
+            if(response.ok){return response.text()}
+            else{return Promise.reject('something went wrong!')}
+        })
+        .then(data => {
+            result.innerHTML = data
+        })
+        .catch(error => console.log("ERROR HAS OCCURRED: " + error))
     })
 
 })
