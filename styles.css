@@ -96,15 +96,23 @@ section{
 }
 section h1{
     margin: 0;
+    font-size: 30px;
 }
 section h3{
     margin: 0;
+    font-size: 23px;
+    color: rgb(255, 161, 161);;
 }
 section h4{
     margin: 0;
+    font-size: 20px;
 }
 section p{
     margin: 0;
+    font-size: 18px;
+}
+.notfound{
+    color: rgb(255, 161, 161);
 }
 
 
