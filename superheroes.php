@@ -93,7 +93,7 @@ if($_SERVER['REQUEST_METHOD'] == 'GET'){
         if($found == false){
             echo "<h1>Result</h1>";
             echo "<hr>";
-            echo "<p>Superhero not found</p>";
+            echo "<p class=\"notfound\">Superhero not found</p>";
         }
         
     }
