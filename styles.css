@@ -1,0 +1,113 @@
+* { 
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+     box-sizing: border-box; 
+}
+
+:root{
+
+}
+
+body{
+    margin: 0;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-family: 'Changa', sans-serif;
+}
+
+.container{
+    margin: 0 auto;
+    max-width: 960px;
+    width: 100%;
+}
+
+::selection{
+    background-color: brown;
+}
+
+header{
+    background-image: url(images/Avengers.jpg);
+    background-position:top;
+    background-size: cover;
+    height: 600px;
+}
+header h1{
+    margin: 30px 0 15px 0;
+    background-color: white;
+    color: black;
+    font-size: 50px;
+    border-radius: 4px;
+    padding: 10px;
+    box-shadow: 0 4px rgb(177, 0, 0);
+}
+header h2{
+    margin: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 2px rgb(177, 0, 0);
+    padding: 2px;
+    border-radius: 2px;
+    color: black;
+    font-size: 18px;
+
+}
+header .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 80%;
+}
+header img{
+    max-width: 500px;
+    height: auto;
+}
+
+
+
+main{
+    box-shadow: 0 -20px 30px 30px rgb(0, 0, 0);
+    margin-bottom: 50px;
+}
+main form{
+    display: grid;
+    grid-template-columns: 7fr 1fr;
+    grid-gap: 5px;
+    height: 50px;
+}
+main input{
+    border-radius: 8px;
+    border: 0;
+    padding: 20px;
+
+}
+main button{
+    border-radius: 8px;
+    border: 0;
+    background-color: rgb(107, 11, 11);
+    color: white;
+    transition: 0.3s;
+}
+main button:hover{
+    box-shadow: 0px 2px rgb(116, 116, 116);
+}
+
+section{
+    overflow: hidden;
+}
+section h1{
+    margin: 0;
+}
+section h3{
+    margin: 0;
+}
+section h4{
+    margin: 0;
+}
+section p{
+    margin: 0;
+}
+
+
+footer{
+    padding: 30px 0 30px 0;
+}
