@@ -66,16 +66,15 @@ $superheroes = [
 if($_SERVER['REQUEST_METHOD'] == 'GET'){
 
     $userInput = filter_input(INPUT_GET, 'name', FILTER_SANITIZE_STRING);
-    echo "SANITIZED INPUT: ".$userInput;
     
     if(empty($userInput)){
+        echo "<h1>Result</h1>";
+        echo "<hr>";
+        echo "<ul>";
         foreach ($superheroes as $superhero){
-            echo "<h1>Result</h1>";
-            echo "<hr>";
-            echo "<ul>";
             echo "<li>".$superhero['alias']."</li>";
-            echo "</ul>";
         }    
+        echo "</ul>";
     }
 
     else{
